@@ -1,4 +1,4 @@
-import { Target, TrendingUp, Users, BarChart3, CheckCircle2, Rocket, Calendar, Lightbulb, Zap, Award, Building2, LineChart, ArrowRight, ChevronRight, GitBranch, Eye, MessageCircleQuestion, ClipboardCheck, AlertTriangle, Cog, Monitor, GraduationCap, ShieldCheck, Crosshair, Heart } from "lucide-react";
+import { Target, TrendingUp, Users, BarChart3, CheckCircle2, Rocket, Calendar, Lightbulb, Zap, Award, Building2, LineChart, ArrowRight, ChevronRight, GitBranch, Eye, MessageCircleQuestion, ClipboardCheck, AlertTriangle, Cog, Monitor, GraduationCap, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-consulting.jpg";
 import logoWhite from "@/assets/logo-white.svg";
@@ -9,6 +9,7 @@ import logoPejota from "@/assets/logos/pejota.webp";
 import foundersTransparent from "@/assets/founders-transparent.png";
 import { Link } from "react-router-dom";
 import BottleneckInfographic from "@/components/BottleneckInfographic";
+import MethodologyInfographic from "@/components/MethodologyInfographic";
 
 const LandingPage = () => {
   const scrollToContact = () => {
@@ -133,56 +134,8 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Metodologia Loboh - 5 Pilares */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Metodologia Loboh</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4 mb-6">
-                5 Pilares para Crescimento Comercial Previsível
-              </h2>
-            </div>
-            
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[{
-              icon: BarChart3,
-              title: "Gestão",
-              desc: "Metas claras, KPIs bem definidos e rituais de acompanhamento que garantem direção, disciplina de execução e decisões baseadas em dados."
-            }, {
-              icon: Crosshair,
-              title: "Oferta",
-              desc: "Definição clara de ICP, personas, mercado e posicionamento para concentrar esforços comerciais nos clientes certos e aumentar conversão."
-            }, {
-              icon: Monitor,
-              title: "Tecnologia",
-              desc: "Automação, Business Intelligence, stack de tecnologia comercial e integrações que dão visibilidade real da operação e escalam a performance."
-            }, {
-              icon: GraduationCap,
-              title: "Capacitação",
-              desc: "Treinamento contínuo, processos documentados, gestão do conhecimento e plano de desenvolvimento individual para execução com excelência."
-            }, {
-              icon: Heart,
-              title: "Cultura",
-              desc: "Cultura de vendas orientada a resultado, com plano de carreira, remuneração variável e incentivos que geram engajamento e alta performance."
-            }].map((item, index) => <div key={index} className="group p-6 rounded-xl bg-card border border-border shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <div className="w-14 h-14 rounded-xl bg-cta/10 flex items-center justify-center mb-4 group-hover:bg-cta/20 transition-colors">
-                    <item.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-                </div>)}
-            </div>
-            
-            <div className="text-center mt-12 p-6 rounded-xl bg-primary/5 border border-primary/20">
-              <p className="text-xl font-semibold text-foreground">
-                Scale-ups não crescem no improviso.<br />
-                <span className="text-primary">Elas crescem com gestão.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Metodologia Loboh - 5 Pilares Infográfico */}
+      <MethodologyInfographic />
 
       {/* O que muda na prática */}
       <section className="py-24 bg-secondary">
