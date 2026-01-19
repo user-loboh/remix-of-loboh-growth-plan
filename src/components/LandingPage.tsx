@@ -274,7 +274,7 @@ const LandingPage = () => {
               text: "Ciclo de vendas mais curto"
             }, {
               icon: LineChart,
-              text: "Receita previsível"
+              text: "Time mais engajado e produtivo"
             }, {
               icon: Users,
               text: "Menos dependência do dono"
