@@ -1,4 +1,4 @@
-import { Target, TrendingUp, Users, BarChart3, CheckCircle2, Rocket, Calendar, Lightbulb, Zap, Award, Building2, LineChart, ArrowRight, ChevronRight, GitBranch, Eye, MessageCircleQuestion, ClipboardCheck, AlertTriangle, Cog, Monitor, GraduationCap, ShieldCheck } from "lucide-react";
+import { Target, TrendingUp, Users, BarChart3, CheckCircle2, Rocket, Calendar, Lightbulb, Zap, Award, Building2, LineChart, ArrowRight, ChevronRight, GitBranch, Eye, MessageCircleQuestion, ClipboardCheck, AlertTriangle, Cog, Monitor, GraduationCap, ShieldCheck, X, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-consulting.jpg";
 import logoWhite from "@/assets/logo-white.svg";
@@ -195,15 +195,42 @@ const LandingPage = () => {
               A Loboh não é mais uma promessa.
             </h2>
             
-            <div className="space-y-2 text-lg text-muted mb-10">
-              <p>Não somos curso que você vê 1 vez e não aplica.</p>
-              <p>Não somos mentoria que só entrega template.</p>
-              <p>Não somos consultoria que só te fala o que fazer.</p>
+            <div className="space-y-4 text-lg text-muted mb-12">
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                  <X className="w-5 h-5 text-red-500" />
+                </div>
+                <p className="text-left">Não somos curso que você vê 1 vez e não aplica.</p>
+              </div>
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                  <X className="w-5 h-5 text-red-500" />
+                </div>
+                <p className="text-left">Não somos mentoria que só entrega template.</p>
+              </div>
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                  <X className="w-5 h-5 text-red-500" />
+                </div>
+                <p className="text-left">Não somos consultoria que só te fala o que fazer.</p>
+              </div>
             </div>
             
-            <p className="text-xl text-primary-foreground leading-relaxed mb-10">
-              Somos uma empresa de <span className="text-primary font-semibold">Serviços Profissionais para Vendas</span>. Entramos na operação, estruturamos, executamos, medimos e evoluímos junto com o cliente.
-            </p>
+            <div className="bg-primary/10 border border-primary/30 rounded-2xl p-8 mb-10">
+              <div className="flex items-start justify-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-primary/30 flex items-center justify-center flex-shrink-0 mt-1">
+                  <Check className="w-6 h-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xl text-primary-foreground leading-relaxed">
+                    Somos uma empresa de <span className="text-primary font-semibold">Serviços Profissionais para Vendas</span>.
+                  </p>
+                  <p className="text-xl text-primary-foreground leading-relaxed mt-2">
+                    Entramos na operação, estruturamos, executamos, medimos e evoluímos junto com o cliente.
+                  </p>
+                </div>
+              </div>
+            </div>
             
             <div className="inline-block p-6 rounded-2xl bg-primary/10 border border-primary/30">
               <p className="text-muted text-sm uppercase tracking-wider mb-2">Chamamos isso de</p>
