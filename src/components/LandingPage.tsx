@@ -200,24 +200,30 @@ const LandingPage = () => {
               Não Somos
             </p>
             
-            <div className="space-y-4 text-lg text-muted mb-12 max-w-lg mx-auto text-left">
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <X className="w-3.5 h-3.5 text-red-500" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 max-w-4xl mx-auto">
+              <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-6 text-left">
+                <div className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <X className="w-4 h-4 text-red-500" />
+                  </div>
+                  <p className="text-lg text-muted flex-1"><span className="font-bold text-primary-foreground">Curso</span> que você <span className="font-bold text-primary-foreground">vê 1 vez e não aplica</span>.</p>
                 </div>
-                <p className="flex-1"><span className="font-bold text-primary-foreground">Curso</span> que você <span className="font-bold text-primary-foreground">vê 1 vez e não aplica</span>.</p>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <X className="w-3.5 h-3.5 text-red-500" />
+              <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-6 text-left">
+                <div className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <X className="w-4 h-4 text-red-500" />
+                  </div>
+                  <p className="text-lg text-muted flex-1"><span className="font-bold text-primary-foreground">Mentoria</span> que <span className="font-bold text-primary-foreground">só entrega template</span>.</p>
                 </div>
-                <p className="flex-1"><span className="font-bold text-primary-foreground">Mentoria</span> que <span className="font-bold text-primary-foreground">só entrega template</span>.</p>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <X className="w-3.5 h-3.5 text-red-500" />
+              <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-6 text-left">
+                <div className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <X className="w-4 h-4 text-red-500" />
+                  </div>
+                  <p className="text-lg text-muted flex-1"><span className="font-bold text-primary-foreground">Consultoria</span> que te <span className="font-bold text-primary-foreground">entrega um projeto</span> e te <span className="font-bold text-primary-foreground">abandona sem resultados</span>.</p>
                 </div>
-                <p className="flex-1"><span className="font-bold text-primary-foreground">Consultoria</span> que te <span className="font-bold text-primary-foreground">entrega um projeto</span> e te <span className="font-bold text-primary-foreground">abandona sem resultados</span>.</p>
               </div>
             </div>
             
