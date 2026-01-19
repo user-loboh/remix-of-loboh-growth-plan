@@ -224,7 +224,7 @@ const LandingPage = () => {
                 </div>
                 <div className="text-left flex-1">
                   <p className="text-xl text-primary-foreground leading-relaxed">
-                    Somos uma empresa de <span className="text-primary font-semibold">Serviços Profissionais para Vendas</span>.
+                    Somos uma empresa de <span className="text-primary font-bold" style={{ fontFamily: 'Oxanium, sans-serif' }}>Serviços Profissionais para Vendas</span>.
                   </p>
                   <p className="text-xl text-primary-foreground leading-relaxed mt-2">
                     Entramos na operação, estruturamos, executamos, medimos e evoluímos continuamente junto com o cliente.
@@ -235,7 +235,7 @@ const LandingPage = () => {
             
             <div className="inline-block p-6 rounded-2xl bg-primary/10 border border-primary/30">
               <p className="text-muted text-sm uppercase tracking-wider mb-2">Chamamos isso de</p>
-              <p className="text-2xl md:text-3xl font-bold text-primary">
+              <p className="text-2xl md:text-3xl font-bold text-primary" style={{ fontFamily: 'Oxanium, sans-serif' }}>
                 Gestão Comercial como Serviço
               </p>
             </div>
