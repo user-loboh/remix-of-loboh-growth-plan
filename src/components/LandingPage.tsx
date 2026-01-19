@@ -163,7 +163,7 @@ const LandingPage = () => {
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
               {[
-                { icon: GitBranch, text: "Go to Market estruturado por canal" },
+                { icon: GitBranch, text: "Go to Market estruturado" },
                 { icon: ClipboardCheck, text: "Processos bem definidos" },
                 { icon: BarChart3, text: "Indicadores confiáveis" },
                 { icon: Target, text: "Execução disciplinada" },
