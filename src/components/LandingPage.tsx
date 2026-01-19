@@ -191,7 +191,7 @@ const LandingPage = () => {
       <section className="py-24 bg-loboh-navy">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-8" style={{ fontFamily: 'Oxanium, sans-serif' }}>
               A Loboh não é "mais uma promessa".
             </h2>
             
