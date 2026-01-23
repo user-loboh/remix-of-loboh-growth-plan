@@ -367,36 +367,26 @@ export default function MethodologyInfographic() {
                       <p className="text-xs text-muted-foreground leading-relaxed">Revisamos resultados e ajustamos o próximo ciclo.</p>
                     </motion.div>
                     
-                    {/* Setas conectando as bordas das caixas - sentido horário */}
-                    {/* Análise: x=190-370, y=0-110 */}
-                    {/* Planejamento: x=380-560, y=225-335 */}
-                    {/* Execução: x=190-370, y=450-560 */}
-                    {/* Revisão: x=0-180, y=225-335 */}
-                    <svg className="absolute inset-0 w-full h-full pointer-events-none z-5" viewBox="0 0 560 560">
+                    {/* Setas circulares conectando as bordas das caixas - sentido horário */}
+                    {/* Centro: 280, 280 | Raio do círculo: ~200px */}
+                    {/* Análise: topo (190-370, 0-110) - borda inferior direita: 370, 110 | borda inferior esquerda: 190, 110 */}
+                    {/* Planejamento: direita (380-560, 225-335) - borda esquerda superior: 380, 225 | borda esquerda inferior: 380, 335 */}
+                    {/* Execução: baixo (190-370, 450-560) - borda superior direita: 370, 450 | borda superior esquerda: 190, 450 */}
+                    {/* Revisão: esquerda (0-180, 225-335) - borda direita superior: 180, 225 | borda direita inferior: 180, 335 */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 560 560">
                       <defs>
-                        <linearGradient id="arrowGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.5" />
-                          <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="1" />
-                        </linearGradient>
-                        <linearGradient id="arrowGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
-                          <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.5" />
-                          <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="1" />
-                        </linearGradient>
-                        <linearGradient id="arrowGrad3" x1="100%" y1="0%" x2="0%" y2="0%">
-                          <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.5" />
-                          <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="1" />
-                        </linearGradient>
-                        <linearGradient id="arrowGrad4" x1="0%" y1="100%" x2="0%" y2="0%">
-                          <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.5" />
-                          <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="1" />
+                        <linearGradient id="circleGrad" gradientUnits="userSpaceOnUse" x1="280" y1="80" x2="280" y2="480">
+                          <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.9" />
+                          <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
+                          <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.9" />
                         </linearGradient>
                         
-                        <marker id="arrowTip" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
-                          <path d="M 0 0 L 12 5 L 0 10 L 3 5 Z" fill="hsl(var(--primary))" />
+                        <marker id="arrowTip" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+                          <path d="M 0 0 L 10 4 L 0 8 L 2 4 Z" fill="hsl(var(--primary))" />
                         </marker>
                         
                         <filter id="glowEffect" x="-50%" y="-50%" width="200%" height="200%">
-                          <feGaussianBlur stdDeviation="2" result="blur"/>
+                          <feGaussianBlur stdDeviation="3" result="blur"/>
                           <feMerge>
                             <feMergeNode in="blur"/>
                             <feMergeNode in="SourceGraphic"/>
@@ -404,11 +394,12 @@ export default function MethodologyInfographic() {
                         </filter>
                       </defs>
                       
-                      {/* Seta 1: Análise (borda direita, 370,55) -> Planejamento (borda topo, 470,225) */}
+                      {/* Arco 1: Análise (canto inferior direito) -> Planejamento (borda esquerda superior) */}
+                      {/* De (370, 110) até (380, 230) - arco no quadrante superior direito */}
                       <motion.path 
-                        d="M 370 55 Q 470 55, 470 225" 
-                        stroke="url(#arrowGrad1)" 
-                        strokeWidth="2" 
+                        d="M 370 115 A 175 175 0 0 1 385 230" 
+                        stroke="url(#circleGrad)" 
+                        strokeWidth="3" 
                         fill="none" 
                         strokeLinecap="round"
                         markerEnd="url(#arrowTip)"
@@ -416,14 +407,15 @@ export default function MethodologyInfographic() {
                         initial={{ pathLength: 0, opacity: 0 }}
                         whileInView={{ pathLength: 1, opacity: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
                       />
                       
-                      {/* Seta 2: Planejamento (borda baixo, 470,335) -> Execução (borda direita, 370,505) */}
+                      {/* Arco 2: Planejamento (borda esquerda inferior) -> Execução (canto superior direito) */}
+                      {/* De (380, 335) até (370, 450) - arco no quadrante inferior direito */}
                       <motion.path 
-                        d="M 470 335 Q 470 505, 370 505" 
-                        stroke="url(#arrowGrad2)" 
-                        strokeWidth="2" 
+                        d="M 385 330 A 175 175 0 0 1 370 445" 
+                        stroke="url(#circleGrad)" 
+                        strokeWidth="3" 
                         fill="none" 
                         strokeLinecap="round"
                         markerEnd="url(#arrowTip)"
@@ -431,14 +423,15 @@ export default function MethodologyInfographic() {
                         initial={{ pathLength: 0, opacity: 0 }}
                         whileInView={{ pathLength: 1, opacity: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.55 }}
+                        transition={{ duration: 0.6, delay: 0.55 }}
                       />
                       
-                      {/* Seta 3: Execução (borda esquerda, 190,505) -> Revisão (borda baixo, 90,335) */}
+                      {/* Arco 3: Execução (canto superior esquerdo) -> Revisão (borda direita inferior) */}
+                      {/* De (190, 450) até (180, 335) - arco no quadrante inferior esquerdo */}
                       <motion.path 
-                        d="M 190 505 Q 90 505, 90 335" 
-                        stroke="url(#arrowGrad3)" 
-                        strokeWidth="2" 
+                        d="M 190 445 A 175 175 0 0 1 175 330" 
+                        stroke="url(#circleGrad)" 
+                        strokeWidth="3" 
                         fill="none" 
                         strokeLinecap="round"
                         markerEnd="url(#arrowTip)"
@@ -446,14 +439,15 @@ export default function MethodologyInfographic() {
                         initial={{ pathLength: 0, opacity: 0 }}
                         whileInView={{ pathLength: 1, opacity: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.7 }}
+                        transition={{ duration: 0.6, delay: 0.7 }}
                       />
                       
-                      {/* Seta 4: Revisão (borda topo, 90,225) -> Análise (borda esquerda, 190,55) */}
+                      {/* Arco 4: Revisão (borda direita superior) -> Análise (canto inferior esquerdo) */}
+                      {/* De (180, 225) até (190, 110) - arco no quadrante superior esquerdo */}
                       <motion.path 
-                        d="M 90 225 Q 90 55, 190 55" 
-                        stroke="url(#arrowGrad4)" 
-                        strokeWidth="2" 
+                        d="M 175 230 A 175 175 0 0 1 190 115" 
+                        stroke="url(#circleGrad)" 
+                        strokeWidth="3" 
                         fill="none" 
                         strokeLinecap="round"
                         markerEnd="url(#arrowTip)"
@@ -461,7 +455,7 @@ export default function MethodologyInfographic() {
                         initial={{ pathLength: 0, opacity: 0 }}
                         whileInView={{ pathLength: 1, opacity: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.85 }}
+                        transition={{ duration: 0.6, delay: 0.85 }}
                       />
                     </svg>
                   </div>
