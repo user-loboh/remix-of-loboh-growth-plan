@@ -131,79 +131,91 @@ const LandingPage = () => {
               </p>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-8">
-              {/* Coluna LOSERS - Modinha */}
+            {/* Headers lado a lado */}
+            <div className="grid lg:grid-cols-2 gap-8 mb-6">
               <div className="relative">
                 <div className="absolute -top-4 left-6 px-4 py-1 bg-destructive text-destructive-foreground text-sm font-bold uppercase tracking-wider rounded-full" style={{ fontFamily: 'Oxanium, sans-serif' }}>
                   Modinha
                 </div>
-                <div className="bg-destructive/5 border-2 border-destructive/30 rounded-3xl p-8 pt-10 h-full">
-                  <p className="text-destructive font-bold text-lg mb-6 uppercase tracking-wider" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                <div className="bg-destructive/5 border-2 border-destructive/30 rounded-3xl p-6 pt-10">
+                  <p className="text-destructive font-bold text-lg uppercase tracking-wider" style={{ fontFamily: 'Oxanium, sans-serif' }}>
                     Caminho "fácil", resultado difícil
                   </p>
-                  
-                  <div className="space-y-4 mb-8">
-                    {[
-                      { title: "Clubinhos de networking", desc: "Foco em status e ambiência. Ninguém bota a mão na massa por você." },
-                      { title: "Cursinho gravado", desc: "Assiste uma vez, não aplica nada. Zero acompanhamento." },
-                      { title: "Mentoria de palco", desc: "Grupo lotado, templates genéricos, zero personalização." },
-                      { title: "Consultoria de projeto", desc: "Entrega um PDF bonito e desaparece. Você que se vire." },
-                      { title: "Promessa de automação mágica com IA", desc: "Sem processo, sem dados, sem gestão real. Não garante resultado." },
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <X className="w-4 h-4 text-destructive" />
-                        </div>
-                        <div>
-                          <p className="font-bold text-foreground">{item.title}</p>
-                          <p className="text-muted-foreground text-sm">{item.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="border-t border-destructive/20 pt-6">
-                    <p className="text-destructive font-semibold italic text-center">"Boa sorte com a execução!"</p>
-                    <p className="text-muted-foreground text-sm text-center mt-2">Passageiro. Genérico. Sem resultado sustentável.</p>
-                  </div>
                 </div>
               </div>
               
-              {/* Coluna WINNERS - Atemporal */}
               <div className="relative">
                 <div className="absolute -top-4 left-6 px-4 py-1 bg-primary text-primary-foreground text-sm font-bold uppercase tracking-wider rounded-full" style={{ fontFamily: 'Oxanium, sans-serif' }}>
                   Atemporal
                 </div>
-                <div className="bg-primary/5 border-2 border-primary/30 rounded-3xl p-8 pt-10 h-full">
-                  <p className="text-primary font-bold text-lg mb-6 uppercase tracking-wider" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                <div className="bg-primary/5 border-2 border-primary/30 rounded-3xl p-6 pt-10">
+                  <p className="text-primary font-bold text-lg uppercase tracking-wider" style={{ fontFamily: 'Oxanium, sans-serif' }}>
                     Esforço correto, resultado previsível
                   </p>
-                  
-                  <div className="space-y-4 mb-8">
-                    {[
-                      { title: "Go to Market estruturado", desc: "Processos definidos, indicadores confiáveis, execução disciplinada." },
-                      { title: "Capacitação contínua + monitoramento", desc: "Treinamento aplicado na prática com acompanhamento semanal." },
-                      { title: "Serviços 100% personalizados", desc: "Construído no contexto da sua contabilidade. Nada de template." },
-                      { title: "Gestão Comercial com Loboh Sales Agile", desc: "Melhoria contínua baseada em dados, sprints e ajustes semanais." },
-                      { title: "IA aplicada em processos validados e dados íntegros", desc: "Tecnologia a serviço de uma operação que já funciona." },
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check className="w-4 h-4 text-primary" />
-                        </div>
-                        <div>
-                          <p className="font-bold text-foreground">{item.title}</p>
-                          <p className="text-muted-foreground text-sm">{item.desc}</p>
-                        </div>
-                      </div>
-                    ))}
+                </div>
+              </div>
+            </div>
+            
+            {/* Linhas correlacionadas - problema e solução lado a lado */}
+            <div className="space-y-4">
+              {[
+                { 
+                  loser: { title: "Clubinhos de networking", desc: "Foco em status e ambiência. Ninguém bota a mão na massa por você." },
+                  winner: { title: "Go to Market estruturado", desc: "Processos definidos, indicadores confiáveis, execução disciplinada." }
+                },
+                { 
+                  loser: { title: "Promessa de automação mágica com IA", desc: "Sem processo, sem dados, sem gestão real. Não garante resultado." },
+                  winner: { title: "IA aplicada em processos validados e dados íntegros", desc: "Tecnologia a serviço de uma operação que já funciona." }
+                },
+                { 
+                  loser: { title: "Cursinho gravado", desc: "Assiste uma vez, não aplica nada. Zero acompanhamento." },
+                  winner: { title: "Capacitação contínua + monitoramento", desc: "Treinamento aplicado na prática com acompanhamento semanal." }
+                },
+                { 
+                  loser: { title: "Mentoria de palco", desc: "Grupo lotado, templates genéricos, zero personalização." },
+                  winner: { title: "Serviços 100% personalizados", desc: "Construído no contexto da sua contabilidade. Nada de template." }
+                },
+                { 
+                  loser: { title: "Consultoria de projeto", desc: "Entrega um PDF bonito e desaparece. Você que se vire." },
+                  winner: { title: "Gestão Comercial com Loboh Sales Agile", desc: "Melhoria contínua baseada em dados, sprints e ajustes semanais." }
+                },
+              ].map((row, index) => (
+                <div key={index} className="grid lg:grid-cols-2 gap-4">
+                  {/* Item Loser */}
+                  <div className="bg-destructive/5 border border-destructive/20 rounded-xl p-4 flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <X className="w-4 h-4 text-destructive" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-foreground">{row.loser.title}</p>
+                      <p className="text-muted-foreground text-sm">{row.loser.desc}</p>
+                    </div>
                   </div>
                   
-                  <div className="border-t border-primary/20 pt-6">
-                    <p className="text-primary font-semibold italic text-center">"A gente executa junto com você."</p>
-                    <p className="text-muted-foreground text-sm text-center mt-2">Perene. Personalizado. Resultado sustentável.</p>
+                  {/* Item Winner */}
+                  <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-foreground">{row.winner.title}</p>
+                      <p className="text-muted-foreground text-sm">{row.winner.desc}</p>
+                    </div>
                   </div>
                 </div>
+              ))}
+            </div>
+            
+            {/* Rodapé de comparação */}
+            <div className="grid lg:grid-cols-2 gap-8 mt-6">
+              <div className="bg-destructive/5 border-2 border-destructive/30 rounded-3xl p-6 text-center">
+                <p className="text-destructive font-semibold italic">"Boa sorte com a execução!"</p>
+                <p className="text-muted-foreground text-sm mt-2">Passageiro. Genérico. Sem resultado sustentável.</p>
+              </div>
+              
+              <div className="bg-primary/5 border-2 border-primary/30 rounded-3xl p-6 text-center">
+                <p className="text-primary font-semibold italic">"A gente executa junto com você."</p>
+                <p className="text-muted-foreground text-sm mt-2">Perene. Personalizado. Resultado sustentável.</p>
               </div>
             </div>
             
