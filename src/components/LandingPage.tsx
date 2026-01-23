@@ -1,4 +1,4 @@
-import { Target, TrendingUp, Users, BarChart3, CheckCircle2, Rocket, Calendar, Lightbulb, Zap, Award, Building2, LineChart, ArrowRight, ArrowDown, ChevronRight, GitBranch, Eye, MessageCircleQuestion, ClipboardCheck, AlertTriangle, Cog, Monitor, GraduationCap, ShieldCheck, X, Check } from "lucide-react";
+import { Target, TrendingUp, Users, BarChart3, CheckCircle2, Rocket, Calendar, Lightbulb, Zap, Award, Building2, LineChart, ArrowRight, ArrowDown, ChevronRight, GitBranch, Eye, MessageCircleQuestion, ClipboardCheck, AlertTriangle, Cog, Monitor, GraduationCap, ShieldCheck, X, Check, Briefcase, Globe, Code, ChartNoAxesCombined } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-consulting.jpg";
@@ -9,6 +9,8 @@ import logoRockContent from "@/assets/logos/rock-content.png";
 import logoMovidesk from "@/assets/logos/movidesk-updated.png";
 import logoContaAzul from "@/assets/logos/contaazul-white.png";
 import foundersTransparent from "@/assets/founders-transparent.png";
+import tiagoPhoto from "@/assets/tiago-faria.jpg";
+import fayolaPhoto from "@/assets/fayola-damaceno.jpg";
 import { Link } from "react-router-dom";
 import BottleneckInfographic from "@/components/BottleneckInfographic";
 import MethodologyInfographic from "@/components/MethodologyInfographic";
@@ -224,44 +226,234 @@ const LandingPage = () => {
       </section>
 
 
-      {/* Autoridade - Tiago */}
-      <section className="py-24 bg-secondary">
+      {/* Storytelling - Credibilidade e Multidisciplinaridade */}
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Quem está por trás</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-4" style={{ fontFamily: 'Oxanium, sans-serif' }}>
-                Liderança com experiência em scale-ups
-              </h2>
-            </div>
+          <div className="max-w-6xl mx-auto">
             
-            <div className="flex flex-col md:flex-row items-center gap-10 p-8 rounded-2xl bg-card border border-border shadow-lg">
-              <div className="w-48 h-48 rounded-2xl overflow-hidden flex-shrink-0">
-                <img src="/assets/tiago-faria.jpg" alt="Tiago Faria - CEO da Loboh" className="w-full h-full object-cover" />
+            {/* Header com filosofia */}
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6">
+                <ShieldCheck className="w-4 h-4 text-primary" />
+                <span className="text-foreground text-sm font-medium">Sem atalhos. Sem fórmulas prontas. Sem hacks milagrosos.</span>
               </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                Apenas <span className="text-primary">execução disciplinada</span><br />da gestão comercial
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Crescimento previsível vem de gente que já fez, não de quem só fala sobre fazer.
+              </p>
+            </motion.div>
+
+            {/* Triangulação Visual */}
+            <div className="grid lg:grid-cols-3 gap-8 mb-16">
               
-              <div className="flex-1 text-center md:text-left">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
-                  <Award className="w-4 h-4" />
-                  CEO da Loboh
+              {/* Pilar 1 - Scale-ups */}
+              <motion.div 
+                className="relative p-8 rounded-2xl bg-loboh-navy text-white overflow-hidden"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-6">
+                    <Rocket className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3" style={{ fontFamily: 'Oxanium, sans-serif' }}>Maturidade de Scale-up</h3>
+                  <p className="text-loboh-gray-200 leading-relaxed mb-6">
+                    Empresas tech de alto crescimento têm o maior nível de maturidade em gestão de vendas do Brasil. Metodologia, processos, dados — tudo é sistemático.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 rounded-full bg-white/10 text-xs font-medium">Playbooks</span>
+                    <span className="px-3 py-1 rounded-full bg-white/10 text-xs font-medium">OKRs</span>
+                    <span className="px-3 py-1 rounded-full bg-white/10 text-xs font-medium">Sprints</span>
+                    <span className="px-3 py-1 rounded-full bg-white/10 text-xs font-medium">Data-driven</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">Tiago Faria (Aspira)</h3>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                    <span>Escalou times em ContaAzul, Gupy e Rock Content</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                    <span>10+ anos liderando vendas em scale-ups</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                    <span>Criador da metodologia Loboh de crescimento</span>
-                  </li>
-                </ul>
-              </div>
+              </motion.div>
+
+              {/* Pilar 2 - Fomos lá */}
+              <motion.div 
+                className="relative p-8 rounded-2xl bg-card border border-border overflow-hidden"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+                    <Award className="w-7 h-7 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-3" style={{ fontFamily: 'Oxanium, sans-serif' }}>Estivemos Lá</h3>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    Lideramos vendas nas maiores scale-ups do Brasil. Não aprendemos em curso — construímos máquinas de vendas que geraram milhões.
+                  </p>
+                  <div className="flex items-center gap-4 opacity-60">
+                    <img src={logoGupy} alt="Gupy" className="h-4 object-contain" style={{ filter: 'grayscale(100%)' }} />
+                    <img src={logoRockContent} alt="Rock Content" className="h-5 object-contain" style={{ filter: 'grayscale(100%)' }} />
+                    <img src={logoContaAzul} alt="ContaAzul" className="h-3.5 object-contain" style={{ filter: 'grayscale(100%)' }} />
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Pilar 3 - Empreendedorismo */}
+              <motion.div 
+                className="relative p-8 rounded-2xl bg-primary text-white overflow-hidden"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center mb-6">
+                    <Building2 className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3" style={{ fontFamily: 'Oxanium, sans-serif' }}>Empreendemos com Sucesso</h3>
+                  <p className="text-white/80 leading-relaxed mb-6">
+                    Além de executivos, somos empreendedores. Fundamos empresas, entendemos a dor do dono e aplicamos o que funciona em contabilidades todos os dias.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 rounded-full bg-white/20 text-xs font-medium">Loboh</span>
+                    <span className="px-3 py-1 rounded-full bg-white/20 text-xs font-medium">Netlinks</span>
+                    <span className="px-3 py-1 rounded-full bg-white/20 text-xs font-medium">Contabilidades</span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
+
+            {/* Seção dos Especialistas */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <div className="text-center mb-10">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                  Nossos Especialistas
+                </h3>
+                <p className="text-muted-foreground max-w-xl mx-auto">
+                  Valorizamos <span className="font-bold text-foreground">multidisciplinaridade</span> e <span className="font-bold text-foreground">diversidade</span> que geram sinergia.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                
+                {/* Tiago */}
+                <motion.div 
+                  className="relative p-8 rounded-2xl bg-loboh-navy overflow-hidden group"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  <div className="flex flex-col sm:flex-row items-center gap-6 relative z-10">
+                    <div className="w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 ring-4 ring-primary/30">
+                      <img src={tiagoPhoto} alt="Tiago Faria" className="w-full h-full object-cover" />
+                    </div>
+                    
+                    <div className="text-center sm:text-left flex-1">
+                      <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-3">
+                        <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold">CEO</span>
+                        <span className="px-3 py-1 rounded-full bg-white/10 text-loboh-gray-200 text-xs">Vendas</span>
+                        <span className="px-3 py-1 rounded-full bg-white/10 text-loboh-gray-200 text-xs">Estratégia</span>
+                      </div>
+                      <h4 className="text-xl font-bold text-white mb-2">Tiago Faria</h4>
+                      <p className="text-loboh-gray-300 text-sm leading-relaxed">
+                        Após 10+ anos de carreira técnica em TI, atuou na liderança de vendas de grandes scale-ups como <span className="text-primary font-medium">Gupy</span>, <span className="text-primary font-medium">Rock Content</span>, <span className="text-primary font-medium">ContaAzul</span> e <span className="text-primary font-medium">Kenoby</span>, onde consolidou seu próprio método de gestão de vendas ágil. Co-fundador da agência global de SEO <span className="text-primary font-medium">Netlinks</span>.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Competências */}
+                  <div className="mt-6 pt-6 border-t border-white/10 flex flex-wrap gap-3 justify-center sm:justify-start">
+                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                      <ChartNoAxesCombined className="w-4 h-4 text-primary" />
+                      <span>Sales Operations</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                      <Code className="w-4 h-4 text-primary" />
+                      <span>Tech Background</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                      <Globe className="w-4 h-4 text-primary" />
+                      <span>SEO Global</span>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Fayola */}
+                <motion.div 
+                  className="relative p-8 rounded-2xl bg-loboh-navy overflow-hidden group"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  <div className="flex flex-col sm:flex-row items-center gap-6 relative z-10">
+                    <div className="w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 ring-4 ring-accent/30">
+                      <img src={fayolaPhoto} alt="Fayola Damaceno" className="w-full h-full object-cover" />
+                    </div>
+                    
+                    <div className="text-center sm:text-left flex-1">
+                      <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-3">
+                        <span className="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-semibold">COO</span>
+                        <span className="px-3 py-1 rounded-full bg-white/10 text-loboh-gray-200 text-xs">Enablement</span>
+                        <span className="px-3 py-1 rounded-full bg-white/10 text-loboh-gray-200 text-xs">Operações</span>
+                      </div>
+                      <h4 className="text-xl font-bold text-white mb-2">Fayola Damaceno</h4>
+                      <p className="text-loboh-gray-300 text-sm leading-relaxed">
+                        Especialista em <span className="text-accent font-medium">Sales Enablement</span> com mais de 15 anos de experiência em Vendas. Fayola treinou times de vendas de alta performance na <span className="text-accent font-medium">ContaAzul</span>, <span className="text-accent font-medium">Cobli</span> e <span className="text-accent font-medium">Movidesk</span>.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Competências */}
+                  <div className="mt-6 pt-6 border-t border-white/10 flex flex-wrap gap-3 justify-center sm:justify-start">
+                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                      <GraduationCap className="w-4 h-4 text-accent" />
+                      <span>Treinamento</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                      <Users className="w-4 h-4 text-accent" />
+                      <span>Gestão de Times</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                      <Briefcase className="w-4 h-4 text-accent" />
+                      <span>Processos</span>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Mensagem de sinergia */}
+              <motion.div 
+                className="mt-10 p-6 rounded-xl bg-secondary border border-border text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+              >
+                <p className="text-muted-foreground">
+                  Nosso time de especialistas traz uma rica variedade de <span className="font-bold text-foreground">competências complementares</span>, assegurando uma abordagem <span className="font-bold text-foreground">holística</span> e <span className="font-bold text-foreground">inovadora</span> em vendas.
+                </p>
+              </motion.div>
+            </motion.div>
+
           </div>
         </div>
       </section>
