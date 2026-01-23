@@ -1,4 +1,4 @@
-import { Target, TrendingUp, Users, BarChart3, CheckCircle2, Rocket, Calendar, Lightbulb, Zap, Award, Building2, LineChart, ArrowRight, ChevronRight, GitBranch, Eye, MessageCircleQuestion, ClipboardCheck, AlertTriangle, Cog, Monitor, GraduationCap, ShieldCheck, X, Check } from "lucide-react";
+import { Target, TrendingUp, Users, BarChart3, CheckCircle2, Rocket, Calendar, Lightbulb, Zap, Award, Building2, LineChart, ArrowRight, ArrowDown, ChevronRight, GitBranch, Eye, MessageCircleQuestion, ClipboardCheck, AlertTriangle, Cog, Monitor, GraduationCap, ShieldCheck, X, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-consulting.jpg";
@@ -181,9 +181,9 @@ const LandingPage = () => {
                   winner: { title: "Gestão Comercial com Loboh Sales Agile", desc: "Melhoria contínua baseada em dados, sprints e ajustes semanais." }
                 },
               ].map((row, index) => (
-                <motion.div 
+              <motion.div 
                   key={index} 
-                  className="grid lg:grid-cols-2 gap-4"
+                  className="grid lg:grid-cols-[1fr_auto_1fr] gap-4 items-center"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true, margin: "-50px" }}
@@ -206,14 +206,24 @@ const LandingPage = () => {
                     </div>
                   </motion.div>
                   
-                  {/* Seta conectora - visível no desktop */}
+                  {/* Seta conectora azul - desktop horizontal, mobile vertical */}
                   <motion.div 
-                    className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center z-10"
+                    className="hidden lg:flex items-center justify-center"
                     initial={{ opacity: 0, scale: 0.5 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.15 + 0.2 }}
                   >
+                    <ArrowRight className="w-6 h-6 text-primary" />
+                  </motion.div>
+                  <motion.div 
+                    className="flex lg:hidden items-center justify-center py-1"
+                    initial={{ opacity: 0, y: -10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.15 + 0.2 }}
+                  >
+                    <ArrowDown className="w-5 h-5 text-primary" />
                   </motion.div>
                   
                   {/* Item Winner */}
