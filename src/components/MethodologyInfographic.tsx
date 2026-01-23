@@ -446,8 +446,8 @@ export default function MethodologyInfographic() {
             </div>
 
             {/* Resultado Final */}
-            <div className="pt-6 border-t border-background/20">
-              <p className="text-center text-sm font-semibold text-background/60 mb-4">RESULTADO:</p>
+            <div className="pt-6 border-t border-primary/20">
+              <p className="text-center text-sm font-semibold text-muted-foreground mb-4">RESULTADO:</p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
                 {finalResults.map((result, index) => (
                   <motion.div
@@ -459,7 +459,7 @@ export default function MethodologyInfographic() {
                     transition={{ delay: 0.6 + index * 0.1 }}
                   >
                     <Check className="w-5 h-5 text-primary" />
-                    <span className="text-background font-medium">{result}</span>
+                    <span className="text-foreground font-medium">{result}</span>
                   </motion.div>
                 ))}
               </div>
