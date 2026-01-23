@@ -76,12 +76,12 @@ const LandingPage = () => {
               </div>
               
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] mb-4 animate-fade-up animation-delay-100" style={{ fontFamily: 'Oxanium, sans-serif' }}>
-                Aumente a receita da sua contabilidade com o<br />
-                <span className="text-primary">método das scale-ups.</span>
+                <span className="text-primary">Gestão Comercial como um Serviço</span><br />
+                para Contabilidades
               </h1>
               
               <p className="text-base md:text-lg text-loboh-gray-200 max-w-xl mb-6 animate-fade-up animation-delay-200 leading-relaxed">
-                Ajude sua contabilidade a crescer como empresas que escalam de verdade: <span className="font-bold">mais oportunidades, mais conversão, mais previsibilidade</span> — sem depender de indicações ou esforço heroico do dono.
+                Fazemos a gestão <span className="font-bold">total ou parcial</span> da sua equipe de vendas aplicando o método das scale-ups que mais crescem no Brasil. <span className="font-bold">Mais oportunidades, mais conversão, mais previsibilidade</span> — sem depender de indicações ou esforço heroico do dono.
               </p>
               
               {/* Benefits grid - Logo bar */}
