@@ -272,12 +272,107 @@ export default function MethodologyInfographic() {
               {/* Desktop: Ciclo em cruz com Análise no topo */}
               <div className="hidden md:block relative">
                 <div className="flex justify-center">
-                  {/* Container 560x560, caixas 180px, altura ~110px estimada */}
-                  {/* Análise: top=0, left=190 (centro), bottom da caixa ~110 */}
-                  {/* Planejamento: right=0 (left=380), top=225 (centro vertical) */}
-                  {/* Execução: bottom=0 (top=450), left=190 (centro) */}
-                  {/* Revisão: left=0, top=225 (centro vertical) */}
-                  <div className="relative w-[560px] h-[560px]">
+                  {/* Container 600x600, centro em 300,300 */}
+                  {/* Caixas 180x~100px posicionadas sobre círculo de raio 200 */}
+                  {/* Análise: centro-topo (300, 100) → left=210, top=50 */}
+                  {/* Planejamento: direita-centro (500, 300) → left=410, top=250 */}
+                  {/* Execução: centro-baixo (300, 500) → left=210, top=450 */}
+                  {/* Revisão: esquerda-centro (100, 300) → left=10, top=250 */}
+                  <div className="relative w-[600px] h-[600px]">
+                    
+                    {/* Círculo de fundo para guia visual - invisível mas ajuda a alinhar */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 600 600">
+                      <defs>
+                        <linearGradient id="circleGradient" gradientUnits="userSpaceOnUse" x1="300" y1="100" x2="300" y2="500">
+                          <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
+                          <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
+                        </linearGradient>
+                        
+                        <marker id="arrowHead" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                          <path d="M 0 0 L 12 5 L 0 10 L 3 5 Z" fill="hsl(var(--primary))" />
+                        </marker>
+                        
+                        <filter id="arrowGlow" x="-50%" y="-50%" width="200%" height="200%">
+                          <feGaussianBlur stdDeviation="2" result="blur"/>
+                          <feMerge>
+                            <feMergeNode in="blur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+                      </defs>
+                      
+                      {/* Arco 1: Análise → Planejamento (quadrante superior direito) */}
+                      {/* De baixo-direita da caixa Análise até esquerda-topo da caixa Planejamento */}
+                      {/* Análise: caixa em (210,50) 180x100 → canto inferior direito: (390, 150) */}
+                      {/* Planejamento: caixa em (410,250) 180x100 → borda esquerda centro-topo: (410, 270) */}
+                      <motion.path 
+                        d="M 385 145 A 200 200 0 0 1 415 265" 
+                        stroke="url(#circleGradient)" 
+                        strokeWidth="3" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        markerEnd="url(#arrowHead)"
+                        filter="url(#arrowGlow)"
+                        initial={{ pathLength: 0, opacity: 0 }}
+                        whileInView={{ pathLength: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7, delay: 0.3 }}
+                      />
+                      
+                      {/* Arco 2: Planejamento → Execução (quadrante inferior direito) */}
+                      {/* Da borda esquerda-baixo do Planejamento até canto superior-direito da Execução */}
+                      {/* Planejamento: borda esquerda centro-baixo: (410, 330) */}
+                      {/* Execução: caixa em (210,450) → canto superior direito: (390, 455) */}
+                      <motion.path 
+                        d="M 415 335 A 200 200 0 0 1 385 455" 
+                        stroke="url(#circleGradient)" 
+                        strokeWidth="3" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        markerEnd="url(#arrowHead)"
+                        filter="url(#arrowGlow)"
+                        initial={{ pathLength: 0, opacity: 0 }}
+                        whileInView={{ pathLength: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7, delay: 0.5 }}
+                      />
+                      
+                      {/* Arco 3: Execução → Revisão (quadrante inferior esquerdo) */}
+                      {/* Do canto superior-esquerdo da Execução até borda direita-baixo da Revisão */}
+                      {/* Execução: canto superior esquerdo: (215, 455) */}
+                      {/* Revisão: caixa em (10,250) → borda direita centro-baixo: (190, 330) */}
+                      <motion.path 
+                        d="M 215 455 A 200 200 0 0 1 185 335" 
+                        stroke="url(#circleGradient)" 
+                        strokeWidth="3" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        markerEnd="url(#arrowHead)"
+                        filter="url(#arrowGlow)"
+                        initial={{ pathLength: 0, opacity: 0 }}
+                        whileInView={{ pathLength: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7, delay: 0.7 }}
+                      />
+                      
+                      {/* Arco 4: Revisão → Análise (quadrante superior esquerdo) */}
+                      {/* Da borda direita-topo da Revisão até canto inferior-esquerdo da Análise */}
+                      {/* Revisão: borda direita centro-topo: (190, 270) */}
+                      {/* Análise: canto inferior esquerdo: (215, 145) */}
+                      <motion.path 
+                        d="M 185 265 A 200 200 0 0 1 215 145" 
+                        stroke="url(#circleGradient)" 
+                        strokeWidth="3" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        markerEnd="url(#arrowHead)"
+                        filter="url(#arrowGlow)"
+                        initial={{ pathLength: 0, opacity: 0 }}
+                        whileInView={{ pathLength: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7, delay: 0.9 }}
+                      />
+                    </svg>
                     
                     {/* Centro do ciclo */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-primary flex items-center justify-center z-20 shadow-2xl">
@@ -290,7 +385,7 @@ export default function MethodologyInfographic() {
                     {/* Análise - Topo Centro */}
                     <motion.div
                       className="absolute w-[180px] p-4 rounded-xl bg-background border border-border shadow-xl z-10"
-                      style={{ top: '0px', left: '190px' }}
+                      style={{ top: '50px', left: '210px' }}
                       initial={{ opacity: 0, y: -20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -310,7 +405,7 @@ export default function MethodologyInfographic() {
                     {/* Planejamento - Direita Centro */}
                     <motion.div
                       className="absolute w-[180px] p-4 rounded-xl bg-background border border-border shadow-xl z-10"
-                      style={{ top: '225px', left: '380px' }}
+                      style={{ top: '250px', left: '410px' }}
                       initial={{ opacity: 0, x: 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -330,7 +425,7 @@ export default function MethodologyInfographic() {
                     {/* Execução - Baixo Centro */}
                     <motion.div
                       className="absolute w-[180px] p-4 rounded-xl bg-background border border-border shadow-xl z-10"
-                      style={{ top: '450px', left: '190px' }}
+                      style={{ top: '450px', left: '210px' }}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -350,7 +445,7 @@ export default function MethodologyInfographic() {
                     {/* Revisão - Esquerda Centro */}
                     <motion.div
                       className="absolute w-[180px] p-4 rounded-xl bg-background border border-border shadow-xl z-10"
-                      style={{ top: '225px', left: '0px' }}
+                      style={{ top: '250px', left: '10px' }}
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -366,98 +461,6 @@ export default function MethodologyInfographic() {
                       </div>
                       <p className="text-xs text-muted-foreground leading-relaxed">Revisamos resultados e ajustamos o próximo ciclo.</p>
                     </motion.div>
-                    
-                    {/* Setas circulares conectando as bordas das caixas - sentido horário */}
-                    {/* Centro: 280, 280 | Raio do círculo: ~200px */}
-                    {/* Análise: topo (190-370, 0-110) - borda inferior direita: 370, 110 | borda inferior esquerda: 190, 110 */}
-                    {/* Planejamento: direita (380-560, 225-335) - borda esquerda superior: 380, 225 | borda esquerda inferior: 380, 335 */}
-                    {/* Execução: baixo (190-370, 450-560) - borda superior direita: 370, 450 | borda superior esquerda: 190, 450 */}
-                    {/* Revisão: esquerda (0-180, 225-335) - borda direita superior: 180, 225 | borda direita inferior: 180, 335 */}
-                    <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 560 560">
-                      <defs>
-                        <linearGradient id="circleGrad" gradientUnits="userSpaceOnUse" x1="280" y1="80" x2="280" y2="480">
-                          <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.9" />
-                          <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
-                          <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.9" />
-                        </linearGradient>
-                        
-                        <marker id="arrowTip" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
-                          <path d="M 0 0 L 10 4 L 0 8 L 2 4 Z" fill="hsl(var(--primary))" />
-                        </marker>
-                        
-                        <filter id="glowEffect" x="-50%" y="-50%" width="200%" height="200%">
-                          <feGaussianBlur stdDeviation="3" result="blur"/>
-                          <feMerge>
-                            <feMergeNode in="blur"/>
-                            <feMergeNode in="SourceGraphic"/>
-                          </feMerge>
-                        </filter>
-                      </defs>
-                      
-                      {/* Arco 1: Análise (canto inferior direito) -> Planejamento (borda esquerda superior) */}
-                      {/* De (370, 110) até (380, 230) - arco no quadrante superior direito */}
-                      <motion.path 
-                        d="M 370 115 A 175 175 0 0 1 385 230" 
-                        stroke="url(#circleGrad)" 
-                        strokeWidth="3" 
-                        fill="none" 
-                        strokeLinecap="round"
-                        markerEnd="url(#arrowTip)"
-                        filter="url(#glowEffect)"
-                        initial={{ pathLength: 0, opacity: 0 }}
-                        whileInView={{ pathLength: 1, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                      />
-                      
-                      {/* Arco 2: Planejamento (borda esquerda inferior) -> Execução (canto superior direito) */}
-                      {/* De (380, 335) até (370, 450) - arco no quadrante inferior direito */}
-                      <motion.path 
-                        d="M 385 330 A 175 175 0 0 1 370 445" 
-                        stroke="url(#circleGrad)" 
-                        strokeWidth="3" 
-                        fill="none" 
-                        strokeLinecap="round"
-                        markerEnd="url(#arrowTip)"
-                        filter="url(#glowEffect)"
-                        initial={{ pathLength: 0, opacity: 0 }}
-                        whileInView={{ pathLength: 1, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.55 }}
-                      />
-                      
-                      {/* Arco 3: Execução (canto superior esquerdo) -> Revisão (borda direita inferior) */}
-                      {/* De (190, 450) até (180, 335) - arco no quadrante inferior esquerdo */}
-                      <motion.path 
-                        d="M 190 445 A 175 175 0 0 1 175 330" 
-                        stroke="url(#circleGrad)" 
-                        strokeWidth="3" 
-                        fill="none" 
-                        strokeLinecap="round"
-                        markerEnd="url(#arrowTip)"
-                        filter="url(#glowEffect)"
-                        initial={{ pathLength: 0, opacity: 0 }}
-                        whileInView={{ pathLength: 1, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.7 }}
-                      />
-                      
-                      {/* Arco 4: Revisão (borda direita superior) -> Análise (canto inferior esquerdo) */}
-                      {/* De (180, 225) até (190, 110) - arco no quadrante superior esquerdo */}
-                      <motion.path 
-                        d="M 175 230 A 175 175 0 0 1 190 115" 
-                        stroke="url(#circleGrad)" 
-                        strokeWidth="3" 
-                        fill="none" 
-                        strokeLinecap="round"
-                        markerEnd="url(#arrowTip)"
-                        filter="url(#glowEffect)"
-                        initial={{ pathLength: 0, opacity: 0 }}
-                        whileInView={{ pathLength: 1, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.85 }}
-                      />
-                    </svg>
                   </div>
                 </div>
               </div>
