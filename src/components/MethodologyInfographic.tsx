@@ -94,21 +94,29 @@ export default function MethodologyInfographic() {
           </motion.div>
 
           {/* Setinha animada - O que a Loboh faz? */}
-          <motion.div 
-            className="flex justify-center mb-6"
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <motion.div className="flex justify-center mb-6" initial={{
+          opacity: 0,
+          y: -10
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.2
+        }}>
             <div className="flex flex-col items-center">
               <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">
                 O que a Loboh faz?
               </span>
-              <motion.div
-                animate={{ y: [0, 6, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              >
+              <motion.div animate={{
+              y: [0, 6, 0]
+            }} transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}>
                 <ArrowDown className="w-6 h-6 text-primary" />
               </motion.div>
             </div>
@@ -156,7 +164,9 @@ export default function MethodologyInfographic() {
                     <div className="w-7 h-7 rounded-full flex items-center justify-center bg-primary/10 text-primary">
                       <pillar.icon className="w-4 h-4" strokeWidth={2} />
                     </div>
-                    <span className="font-bold text-foreground text-sm" style={{ fontFamily: 'Oxanium, sans-serif' }}>{pillar.title}</span>
+                    <span className="font-bold text-foreground text-sm" style={{
+                  fontFamily: 'Oxanium, sans-serif'
+                }}>{pillar.title}</span>
                   </div>
                   <div className="flex flex-wrap gap-1">
                     {pillar.includes.map((item, i) => <span key={i} className="inline-block px-2 py-0.5 rounded-full bg-primary/10 text-[10px] text-primary font-medium">
@@ -193,21 +203,29 @@ export default function MethodologyInfographic() {
           </motion.div>
 
           {/* Setinha animada - Como funciona? */}
-          <motion.div 
-            className="flex justify-center mb-6"
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <motion.div className="flex justify-center mb-6" initial={{
+          opacity: 0,
+          y: -10
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.2
+        }}>
             <div className="flex flex-col items-center">
               <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">
                 Como funciona?
               </span>
-              <motion.div
-                animate={{ y: [0, 6, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              >
+              <motion.div animate={{
+              y: [0, 6, 0]
+            }} transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}>
                 <ArrowDown className="w-6 h-6 text-primary" />
               </motion.div>
             </div>
@@ -237,9 +255,7 @@ export default function MethodologyInfographic() {
             }}>
                 Implementação em 65 dias
               </p>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Implementamos uma base sólida de Processos, Stack de tecnologia, Trilha de Capacitação e Rituais de Acompanhamento de Metas e KPIs que prepara seu time para escala de verdade.
-              </p>
+              <p className="text-muted-foreground max-w-2xl mx-auto">Implementamos uma base sólida de Gestão do Conhecimento, Stack de tecnologia, Trilha de Capacitação e Rituais de Acompanhamento de Metas e KPIs que prepara seu time para escala de verdade.</p>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -308,8 +324,8 @@ export default function MethodologyInfographic() {
         }}>
             <div className="text-center mb-10">
               <span className="text-primary font-bold text-3xl md:text-4xl tracking-wider" style={{
-                fontFamily: 'Oxanium, sans-serif'
-              }}>
+              fontFamily: 'Oxanium, sans-serif'
+            }}>
                 Loboh Sales Agile
               </span>
               <h3 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-3" style={{
