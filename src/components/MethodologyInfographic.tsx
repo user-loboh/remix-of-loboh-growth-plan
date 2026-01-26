@@ -309,10 +309,12 @@ e que bate meta todos os meses. <span className="font-semibold text-foreground">
           delay: 0.2
         }}>
             <div className="text-center mb-10">
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+              <span className="text-primary font-semibold text-xl md:text-2xl uppercase tracking-wider" style={{
+                fontFamily: 'Oxanium, sans-serif'
+              }}>
                 Loboh Sales Agile
               </span>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mt-2 mb-3" style={{
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-3" style={{
               fontFamily: 'Oxanium, sans-serif'
             }}>
                 Gestão de Vendas Ágil
