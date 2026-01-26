@@ -1,124 +1,111 @@
 import { motion } from "framer-motion";
 import { Crosshair, BarChart3, Monitor, GraduationCap, Heart, ArrowDown, Check, X, BookOpen, Settings, Users, Repeat, Search, ClipboardList, Play, RefreshCw } from "lucide-react";
-
-const pillars = [
-  {
-    number: 1,
-    icon: Crosshair,
-    title: "Oferta",
-    includes: ["ICP", "Personas", "Mercado", "Posicionamento"],
-  },
-  {
-    number: 2,
-    icon: BarChart3,
-    title: "Gestão",
-    includes: ["Metas", "KPIs", "Estrutura do time", "Rituais"],
-  },
-  {
-    number: 3,
-    icon: Monitor,
-    title: "Tecnologia",
-    includes: ["Automação", "BI", "Stack Comercial", "Integrações"],
-  },
-  {
-    number: 4,
-    icon: GraduationCap,
-    title: "Capacitação",
-    includes: ["Treinamento", "Processos", "Conhecimento", "PDI"],
-  },
-  {
-    number: 5,
-    icon: Heart,
-    title: "Cultura",
-    includes: ["Cultura", "Carreira", "Remuneração", "Incentivos"],
-  },
-];
-
-const implementationSteps = [
-  {
-    number: "1",
-    icon: BookOpen,
-    title: "Playbook",
-    description: "Material completo com todas as técnicas e processos da jornada de vendas.",
-  },
-  {
-    number: "2",
-    icon: Settings,
-    title: "Ajuste de CRM",
-    description: "Espelhamos seu processo ideal no CRM para gerar dados com visibilidade total.",
-  },
-  {
-    number: "3",
-    icon: Users,
-    title: "Treinamento",
-    description: "Capacitamos seu time dos fundamentos de vendas ao processo contextual da empresa.",
-  },
-  {
-    number: "4",
-    icon: Repeat,
-    title: "Modelo de Gestão Ágil",
-    description: "Implementamos um modelo simples que dá ritmo às operações e ações táticas.",
-  },
-];
-
-const agileCycle = [
-  {
-    icon: Search,
-    title: "Análise",
-    description: "Identificamos causas raízes e oportunidades de maior impacto.",
-  },
-  {
-    icon: ClipboardList,
-    title: "Planejamento",
-    description: "Priorizamos ações pelo maior resultado com menor esforço.",
-  },
-  {
-    icon: Play,
-    title: "Execução",
-    description: "Acompanhamos a execução mão na massa das ações planejadas.",
-  },
-  {
-    icon: RefreshCw,
-    title: "Revisão",
-    description: "Revisamos resultados e ajustamos o próximo ciclo.",
-  },
-];
-
-const finalResults = [
-  "Execução consistente",
-  "Máquina de vendas sustentável",
-  "Crescimento previsível",
-];
-
+const pillars = [{
+  number: 1,
+  icon: Crosshair,
+  title: "Oferta",
+  includes: ["ICP", "Personas", "Mercado", "Posicionamento"]
+}, {
+  number: 2,
+  icon: BarChart3,
+  title: "Gestão",
+  includes: ["Metas", "KPIs", "Estrutura do time", "Rituais"]
+}, {
+  number: 3,
+  icon: Monitor,
+  title: "Tecnologia",
+  includes: ["Automação", "BI", "Stack Comercial", "Integrações"]
+}, {
+  number: 4,
+  icon: GraduationCap,
+  title: "Capacitação",
+  includes: ["Treinamento", "Processos", "Conhecimento", "PDI"]
+}, {
+  number: 5,
+  icon: Heart,
+  title: "Cultura",
+  includes: ["Cultura", "Carreira", "Remuneração", "Incentivos"]
+}];
+const implementationSteps = [{
+  number: "1",
+  icon: BookOpen,
+  title: "Playbook",
+  description: "Material completo com todas as técnicas e processos da jornada de vendas."
+}, {
+  number: "2",
+  icon: Settings,
+  title: "Ajuste de CRM",
+  description: "Espelhamos seu processo ideal no CRM para gerar dados com visibilidade total."
+}, {
+  number: "3",
+  icon: Users,
+  title: "Treinamento",
+  description: "Capacitamos seu time dos fundamentos de vendas ao processo contextual da empresa."
+}, {
+  number: "4",
+  icon: Repeat,
+  title: "Modelo de Gestão Ágil",
+  description: "Implementamos um modelo simples que dá ritmo às operações e ações táticas."
+}];
+const agileCycle = [{
+  icon: Search,
+  title: "Análise",
+  description: "Identificamos causas raízes e oportunidades de maior impacto."
+}, {
+  icon: ClipboardList,
+  title: "Planejamento",
+  description: "Priorizamos ações pelo maior resultado com menor esforço."
+}, {
+  icon: Play,
+  title: "Execução",
+  description: "Acompanhamos a execução mão na massa das ações planejadas."
+}, {
+  icon: RefreshCw,
+  title: "Revisão",
+  description: "Revisamos resultados e ajustamos o próximo ciclo."
+}];
+const finalResults = ["Execução consistente", "Máquina de vendas sustentável", "Crescimento previsível"];
 export default function MethodologyInfographic() {
-  return (
-    <section className="py-16 md:py-20 bg-background overflow-hidden">
+  return <section className="py-16 md:py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+          <motion.div className="text-center mb-12" initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.6
+        }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{
+            fontFamily: 'Oxanium, sans-serif'
+          }}>
               Sem atalhos. Sem fórmulas prontas. Sem hacks.
             </h2>
-            <p className="text-xl text-primary font-semibold" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+            <p className="text-xl text-primary font-semibold" style={{
+            fontFamily: 'Oxanium, sans-serif'
+          }}>
               Apenas execução disciplinada da Gestão Comercial.
             </p>
           </motion.div>
 
           {/* 5 áreas críticas - todos os itens visíveis */}
-          <motion.div
-            className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/30 mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
+          <motion.div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/30 mb-10" initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.1
+        }}>
             <div className="text-center mb-8">
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Cuidamos de <span className="font-semibold text-primary">5 áreas críticas</span> que precisam funcionar em sincronia para que seu time comercial imprima um <span className="font-semibold text-foreground">ritmo constante e eficiente</span> de vendas.
@@ -127,15 +114,18 @@ export default function MethodologyInfographic() {
 
             {/* Visual dos 5 pilares com TODOS os itens */}
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-              {pillars.map((pillar, index) => (
-                <motion.div
-                  key={pillar.number}
-                  className="relative p-4 rounded-xl bg-card border-2 border-primary/50 shadow-md"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.1 + index * 0.08 }}
-                >
+              {pillars.map((pillar, index) => <motion.div key={pillar.number} className="relative p-4 rounded-xl bg-card border-2 border-primary/50 shadow-md" initial={{
+              opacity: 0,
+              scale: 0.9
+            }} whileInView={{
+              opacity: 1,
+              scale: 1
+            }} viewport={{
+              once: true
+            }} transition={{
+              duration: 0.3,
+              delay: 0.1 + index * 0.08
+            }}>
                   {/* Check badge */}
                   <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-primary flex items-center justify-center shadow-sm">
                     <Check className="w-3 h-3 text-primary-foreground" strokeWidth={3} />
@@ -148,67 +138,78 @@ export default function MethodologyInfographic() {
                     <span className="font-bold text-foreground text-sm">{pillar.title}</span>
                   </div>
                   <div className="flex flex-wrap gap-1">
-                    {pillar.includes.map((item, i) => (
-                      <span
-                        key={i}
-                        className="inline-block px-2 py-0.5 rounded-full bg-primary/10 text-[10px] text-primary font-medium"
-                      >
+                    {pillar.includes.map((item, i) => <span key={i} className="inline-block px-2 py-0.5 rounded-full bg-primary/10 text-[10px] text-primary font-medium">
                         {item}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>)}
             </div>
           </motion.div>
 
           {/* Fundo preto forte - CTA de ritmo - Copy melhorada */}
-          <motion.div
-            className="p-6 md:p-8 rounded-2xl bg-foreground mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-          >
+          <motion.div className="p-6 md:p-8 rounded-2xl bg-foreground mb-10" initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.15
+        }}>
             <div className="text-center">
               <p className="text-sm text-background/70 mb-2">
                 São <span className="font-semibold text-background">múltiplas frentes estratégicas, táticas e operacionais</span> para uma liderança gerir sozinha.
               </p>
-              <p className="text-lg md:text-xl font-bold text-background" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+              <p className="text-lg md:text-xl font-bold text-background" style={{
+              fontFamily: 'Oxanium, sans-serif'
+            }}>
                 Você precisa de ritmo e método. <span className="text-primary">Nós orquestramos e executamos para você.</span>
               </p>
             </div>
           </motion.div>
 
           {/* Implementação em 65 dias */}
-          <motion.div
-            className="mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <motion.div className="mb-12" initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.2
+        }}>
             <div className="text-center mb-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3" style={{
+              fontFamily: 'Oxanium, sans-serif'
+            }}>
                 Implementação em <span className="text-primary">65 dias</span>
               </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              <span className="font-semibold text-foreground">GTM Foundation</span> é a fundamentação necessária para criar uma equipe de vendas escalável
-              <br className="hidden md:block" />
-              <span className="text-primary font-medium">e que bate meta todos os meses.</span>
-            </p>
+              <p className="text-muted-foreground max-w-2xl mx-auto">GTM Foundation é a fundamentação sólida necessária para criar uma equipe de vendas escalável
+e que bate meta todos os meses.<span className="font-semibold text-foreground">Sem dados, como automatizar e ganhar escala?</span>
+                <br className="hidden md:block" />
+                <span className="text-primary font-medium">Preparamos seu time de vendas para escala de verdade.</span>
+              </p>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {implementationSteps.map((step, index) => (
-                <motion.div
-                  key={step.number}
-                  className="relative p-5 rounded-xl bg-card border border-border shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
-                >
+              {implementationSteps.map((step, index) => <motion.div key={step.number} className="relative p-5 rounded-xl bg-card border border-border shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true
+            }} transition={{
+              duration: 0.3,
+              delay: 0.1 + index * 0.1
+            }}>
                   <div className="absolute -top-3 left-4 px-2 py-0.5 rounded-full bg-primary text-primary-foreground text-xs font-bold">
                     {step.number}
                   </div>
@@ -216,24 +217,29 @@ export default function MethodologyInfographic() {
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                       <step.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <h4 className="font-bold text-foreground" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                    <h4 className="font-bold text-foreground" style={{
+                  fontFamily: 'Oxanium, sans-serif'
+                }}>
                       {step.title}
                     </h4>
                   </div>
                   <p className="text-sm text-muted-foreground">{step.description}</p>
-                </motion.div>
-              ))}
+                </motion.div>)}
             </div>
           </motion.div>
 
           {/* Arrow transition */}
-          <motion.div
-            className="flex justify-center mb-12"
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-          >
+          <motion.div className="flex justify-center mb-12" initial={{
+          opacity: 0,
+          y: -10
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          delay: 0.3
+        }}>
             <div className="flex flex-col items-center gap-2">
               <ArrowDown className="w-8 h-8 text-primary animate-bounce" />
               <span className="text-primary font-semibold text-sm uppercase tracking-wider">
@@ -243,18 +249,25 @@ export default function MethodologyInfographic() {
           </motion.div>
 
           {/* Gestão de Vendas Ágil - Fundo azul clarinho */}
-          <motion.div
-            className="p-6 md:p-10 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/30"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <motion.div className="p-6 md:p-10 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/30" initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          duration: 0.5,
+          delay: 0.2
+        }}>
             <div className="text-center mb-10">
               <span className="text-primary font-semibold text-sm uppercase tracking-wider">
                 Loboh Sales Agile
               </span>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mt-2 mb-3" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mt-2 mb-3" style={{
+              fontFamily: 'Oxanium, sans-serif'
+            }}>
                 Gestão de Vendas Ágil
               </h3>
               <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -283,30 +296,28 @@ export default function MethodologyInfographic() {
                         
                         {/* Glow suave */}
                         <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
-                          <feGaussianBlur stdDeviation="3" result="blur"/>
+                          <feGaussianBlur stdDeviation="3" result="blur" />
                           <feMerge>
-                            <feMergeNode in="blur"/>
-                            <feMergeNode in="SourceGraphic"/>
+                            <feMergeNode in="blur" />
+                            <feMergeNode in="SourceGraphic" />
                           </feMerge>
                         </filter>
                       </defs>
                       
                       {/* Elipse principal - o ciclo contínuo */}
                       {/* Centro: 290, 260 | rx: 240 | ry: 200 */}
-                      <motion.ellipse
-                        cx="290"
-                        cy="260"
-                        rx="240"
-                        ry="200"
-                        fill="none"
-                        stroke="url(#cycleGradient)"
-                        strokeWidth="2.5"
-                        filter="url(#softGlow)"
-                        initial={{ pathLength: 0, opacity: 0 }}
-                        whileInView={{ pathLength: 1, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1.2, ease: "easeOut" }}
-                      />
+                      <motion.ellipse cx="290" cy="260" rx="240" ry="200" fill="none" stroke="url(#cycleGradient)" strokeWidth="2.5" filter="url(#softGlow)" initial={{
+                      pathLength: 0,
+                      opacity: 0
+                    }} whileInView={{
+                      pathLength: 1,
+                      opacity: 1
+                    }} viewport={{
+                      once: true
+                    }} transition={{
+                      duration: 1.2,
+                      ease: "easeOut"
+                    }} />
                     </svg>
                     
                     {/* Centro do ciclo - SPRINT */}
@@ -318,19 +329,28 @@ export default function MethodologyInfographic() {
                     </div>
                     
                     {/* Análise - Topo */}
-                    <motion.div
-                      className="absolute w-[180px] p-4 rounded-2xl bg-background border border-border/50 shadow-lg z-10"
-                      style={{ top: '10px', left: '200px' }}
-                      initial={{ opacity: 0, y: -20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
-                    >
+                    <motion.div className="absolute w-[180px] p-4 rounded-2xl bg-background border border-border/50 shadow-lg z-10" style={{
+                    top: '10px',
+                    left: '200px'
+                  }} initial={{
+                    opacity: 0,
+                    y: -20
+                  }} whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }} viewport={{
+                    once: true
+                  }} transition={{
+                    duration: 0.5,
+                    delay: 0.2
+                  }}>
                       <div className="flex items-center gap-3 mb-2">
                         <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
                           <Search className="w-4 h-4 text-primary-foreground" />
                         </div>
-                        <h4 className="font-bold text-foreground text-sm" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                        <h4 className="font-bold text-foreground text-sm" style={{
+                        fontFamily: 'Oxanium, sans-serif'
+                      }}>
                           Análise
                         </h4>
                       </div>
@@ -338,19 +358,28 @@ export default function MethodologyInfographic() {
                     </motion.div>
                     
                     {/* Planejamento - Direita */}
-                    <motion.div
-                      className="absolute w-[180px] p-4 rounded-2xl bg-background border border-border/50 shadow-lg z-10"
-                      style={{ top: '200px', right: '0px' }}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.4 }}
-                    >
+                    <motion.div className="absolute w-[180px] p-4 rounded-2xl bg-background border border-border/50 shadow-lg z-10" style={{
+                    top: '200px',
+                    right: '0px'
+                  }} initial={{
+                    opacity: 0,
+                    x: 20
+                  }} whileInView={{
+                    opacity: 1,
+                    x: 0
+                  }} viewport={{
+                    once: true
+                  }} transition={{
+                    duration: 0.5,
+                    delay: 0.4
+                  }}>
                       <div className="flex items-center gap-3 mb-2">
                         <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
                           <ClipboardList className="w-4 h-4 text-primary-foreground" />
                         </div>
-                        <h4 className="font-bold text-foreground text-sm" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                        <h4 className="font-bold text-foreground text-sm" style={{
+                        fontFamily: 'Oxanium, sans-serif'
+                      }}>
                           Planejamento
                         </h4>
                       </div>
@@ -358,19 +387,28 @@ export default function MethodologyInfographic() {
                     </motion.div>
                     
                     {/* Execução - Baixo */}
-                    <motion.div
-                      className="absolute w-[180px] p-4 rounded-2xl bg-background border border-border/50 shadow-lg z-10"
-                      style={{ bottom: '10px', left: '200px' }}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.6 }}
-                    >
+                    <motion.div className="absolute w-[180px] p-4 rounded-2xl bg-background border border-border/50 shadow-lg z-10" style={{
+                    bottom: '10px',
+                    left: '200px'
+                  }} initial={{
+                    opacity: 0,
+                    y: 20
+                  }} whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }} viewport={{
+                    once: true
+                  }} transition={{
+                    duration: 0.5,
+                    delay: 0.6
+                  }}>
                       <div className="flex items-center gap-3 mb-2">
                         <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
                           <Play className="w-4 h-4 text-primary-foreground" />
                         </div>
-                        <h4 className="font-bold text-foreground text-sm" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                        <h4 className="font-bold text-foreground text-sm" style={{
+                        fontFamily: 'Oxanium, sans-serif'
+                      }}>
                           Execução
                         </h4>
                       </div>
@@ -378,19 +416,28 @@ export default function MethodologyInfographic() {
                     </motion.div>
                     
                     {/* Revisão - Esquerda */}
-                    <motion.div
-                      className="absolute w-[180px] p-4 rounded-2xl bg-background border border-border/50 shadow-lg z-10"
-                      style={{ top: '200px', left: '0px' }}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.8 }}
-                    >
+                    <motion.div className="absolute w-[180px] p-4 rounded-2xl bg-background border border-border/50 shadow-lg z-10" style={{
+                    top: '200px',
+                    left: '0px'
+                  }} initial={{
+                    opacity: 0,
+                    x: -20
+                  }} whileInView={{
+                    opacity: 1,
+                    x: 0
+                  }} viewport={{
+                    once: true
+                  }} transition={{
+                    duration: 0.5,
+                    delay: 0.8
+                  }}>
                       <div className="flex items-center gap-3 mb-2">
                         <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
                           <RefreshCw className="w-4 h-4 text-primary-foreground" />
                         </div>
-                        <h4 className="font-bold text-foreground text-sm" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                        <h4 className="font-bold text-foreground text-sm" style={{
+                        fontFamily: 'Oxanium, sans-serif'
+                      }}>
                           Revisão
                         </h4>
                       </div>
@@ -402,15 +449,18 @@ export default function MethodologyInfographic() {
               
               {/* Mobile: Grid com setas - ordem: Análise, Planejamento, Revisão, Execução */}
               <div className="md:hidden grid grid-cols-2 gap-3">
-                {[agileCycle[0], agileCycle[1], agileCycle[3], agileCycle[2]].map((phase, index) => (
-                  <motion.div
-                    key={phase.title}
-                    className="relative p-4 rounded-xl bg-background border border-background/20 shadow-md"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
-                  >
+                {[agileCycle[0], agileCycle[1], agileCycle[3], agileCycle[2]].map((phase, index) => <motion.div key={phase.title} className="relative p-4 rounded-xl bg-background border border-background/20 shadow-md" initial={{
+                opacity: 0,
+                scale: 0.9
+              }} whileInView={{
+                opacity: 1,
+                scale: 1
+              }} viewport={{
+                once: true
+              }} transition={{
+                duration: 0.3,
+                delay: 0.1 + index * 0.1
+              }}>
                     <div className="absolute -top-2 -left-2 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-xs font-bold text-primary-foreground">
                       {index === 0 ? 1 : index === 1 ? 2 : index === 2 ? 4 : 3}
                     </div>
@@ -418,23 +468,26 @@ export default function MethodologyInfographic() {
                       <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
                         <phase.icon className="w-4 h-4 text-primary-foreground" />
                       </div>
-                      <h4 className="font-bold text-foreground text-sm" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                      <h4 className="font-bold text-foreground text-sm" style={{
+                    fontFamily: 'Oxanium, sans-serif'
+                  }}>
                         {phase.title}
                       </h4>
                     </div>
                     <p className="text-xs text-muted-foreground">{phase.description}</p>
-                  </motion.div>
-                ))}
+                  </motion.div>)}
               </div>
               
               {/* Mobile cycle indicator */}
-              <motion.div
-                className="md:hidden flex justify-center mt-4"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-              >
+              <motion.div className="md:hidden flex justify-center mt-4" initial={{
+              opacity: 0
+            }} whileInView={{
+              opacity: 1
+            }} viewport={{
+              once: true
+            }} transition={{
+              delay: 0.5
+            }}>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary border border-primary">
                   <Repeat className="w-4 h-4 text-primary-foreground" />
                   <span className="text-sm font-medium text-primary-foreground">Ciclo contínuo</span>
@@ -446,24 +499,24 @@ export default function MethodologyInfographic() {
             <div className="pt-6 border-t border-primary/20">
               <p className="text-center text-sm font-semibold text-muted-foreground mb-4">RESULTADO:</p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-                {finalResults.map((result, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-center gap-2"
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.6 + index * 0.1 }}
-                  >
+                {finalResults.map((result, index) => <motion.div key={index} className="flex items-center gap-2" initial={{
+                opacity: 0,
+                x: -10
+              }} whileInView={{
+                opacity: 1,
+                x: 0
+              }} viewport={{
+                once: true
+              }} transition={{
+                delay: 0.6 + index * 0.1
+              }}>
                     <Check className="w-5 h-5 text-primary" />
                     <span className="text-foreground font-medium">{result}</span>
-                  </motion.div>
-                ))}
+                  </motion.div>)}
               </div>
             </div>
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
