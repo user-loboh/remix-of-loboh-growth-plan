@@ -29,7 +29,7 @@ const pillars = [{
 const implementationSteps = [{
   number: "1",
   icon: BookOpen,
-  title: "Playbook",
+  title: "Playbook e Gestão do Conhecimento",
   description: "Material completo com todas as técnicas e processos da jornada de vendas."
 }, {
   number: "2",
