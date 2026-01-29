@@ -237,71 +237,68 @@ const ComparisonSection = () => {
 
           {/* Conclusão - Duas Diferenças */}
           <motion.div 
-            className="mt-12"
+            className="mt-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <div className="text-center mb-8">
+            <div className="text-center mb-10">
               <h3 className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'Oxanium, sans-serif' }}>
                 As duas diferenças entre <span className="text-destructive">comprar informação</span> e <span className="text-primary">contratar execução</span>
               </h3>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            {/* Cards empilhados verticalmente */}
+            <div className="max-w-2xl mx-auto space-y-4">
               {/* Diferença 1 - O Resultado */}
               <motion.div
-                className="relative p-6 rounded-2xl bg-card border-2 border-primary/30 overflow-hidden"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                className="relative p-6 rounded-2xl bg-card border border-border/50 shadow-sm"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.9 }}
               >
-                {/* Decorative gradient */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
-                
-                {/* Number Badge */}
-                <div className="absolute -top-3 -left-3 w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/30 z-10">
-                  <span className="text-lg font-bold text-primary-foreground" style={{ fontFamily: 'Oxanium, sans-serif' }}>1</span>
-                </div>
-                
-                <div className="relative z-10 pt-3">
-                  <h4 className="text-xl font-bold text-foreground mb-3" style={{ fontFamily: 'Oxanium, sans-serif' }}>
-                    O Resultado
-                  </h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    O resultado de contratar execução é <span className="text-primary font-semibold">real</span>.
-                  </p>
-                </div>
+                <h4 className="text-xl font-bold text-foreground mb-2" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                  O Resultado
+                </h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  O resultado de contratar execução é <span className="text-primary font-semibold">real</span>.
+                </p>
               </motion.div>
 
               {/* Diferença 2 - O Processo */}
               <motion.div
-                className="relative p-6 rounded-2xl bg-card border-2 border-accent/30 overflow-hidden"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                className="relative p-6 rounded-2xl bg-card border border-border/50 shadow-sm"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 1 }}
               >
-                {/* Decorative gradient */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-accent/10 rounded-full blur-2xl" />
-                
-                {/* Number Badge */}
-                <div className="absolute -top-3 -left-3 w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-lg shadow-accent/30 z-10">
-                  <span className="text-lg font-bold text-white" style={{ fontFamily: 'Oxanium, sans-serif' }}>2</span>
-                </div>
-                
-                <div className="relative z-10 pt-3">
-                  <h4 className="text-xl font-bold text-foreground mb-3" style={{ fontFamily: 'Oxanium, sans-serif' }}>
-                    O Processo
-                  </h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Você tem que <span className="text-accent font-semibold">topar construir</span>.
-                  </p>
-                </div>
+                <h4 className="text-xl font-bold text-foreground mb-2" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                  O Processo
+                </h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Você tem que <span className="text-primary font-semibold">topar construir</span>.
+                </p>
               </motion.div>
             </div>
+
+            {/* Conclusão impactante */}
+            <motion.div
+              className="mt-10 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 1.1 }}
+            >
+              <p className="text-2xl md:text-3xl font-bold text-foreground mb-3" style={{ fontFamily: 'Oxanium, sans-serif' }}>
+                Sem atalhos. Sem fórmulas prontas. Sem hacks.
+              </p>
+              <p className="text-primary font-medium text-lg">
+                Apenas execução disciplinada da Gestão Comercial.
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </div>
