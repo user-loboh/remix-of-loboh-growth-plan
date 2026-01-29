@@ -84,8 +84,8 @@ const BottleneckInfographic = () => {
           >
             <span className="text-primary font-medium text-sm uppercase tracking-widest">Diagnóstico</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-4" style={{ fontFamily: 'Oxanium, sans-serif' }}>
-              Como o dono da contabilidade vira<br />
-              o maior <span className="text-destructive">gargalo do crescimento</span> do negócio
+              Como a Liderança Comercial vira o maior<br />
+              <span className="text-destructive">gargalo de crescimento</span> das Contabilidades
             </h2>
           </motion.div>
 
