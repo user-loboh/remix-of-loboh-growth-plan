@@ -69,29 +69,6 @@ export default function MethodologyInfographic() {
   return <section className="py-16 md:py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          {/* Header */}
-          <motion.div className="text-center mb-12" initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} transition={{
-          duration: 0.6
-        }}>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{
-            fontFamily: 'Oxanium, sans-serif'
-          }}>
-              Sem atalhos. Sem fórmulas prontas. Sem hacks.
-            </h2>
-            <p className="text-xl text-primary font-semibold" style={{
-            fontFamily: 'Oxanium, sans-serif'
-          }}>
-              Apenas execução disciplinada da Gestão Comercial.
-            </p>
-          </motion.div>
 
           {/* Setinha animada - O que a Loboh faz? */}
           <motion.div className="flex justify-center mb-6" initial={{
