@@ -522,27 +522,6 @@ const LandingPage = () => {
                   </div>
                 </motion.div>
               </div>
-
-              {/* Mensagem de sinergia - Fundação + Ciclo Contínuo */}
-              <motion.div 
-                className="mt-10 p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-              >
-                <div className="flex items-center justify-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
-                    <ShieldCheck className="w-5 h-5 text-primary" />
-                  </div>
-                  <h4 className="text-lg font-bold text-foreground" style={{ fontFamily: 'Oxanium, sans-serif' }}>
-                    Fundação Sólida + Ciclo de Melhoria Contínua
-                  </h4>
-                </div>
-                <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                  Nossa entrega começa com a <span className="font-bold text-foreground">GTM Foundation</span> — a base indispensável de playbook, CRM e treinamento — e evolui continuamente com o <span className="font-bold text-foreground">Loboh Sales Agile</span>: 5 pilares estratégicos orquestrados em sprints semanais. O resultado? <span className="font-bold text-primary">Um sistema de vendas que cresce com você, nunca para.</span>
-                </p>
-              </motion.div>
             </motion.div>
 
           </div>
