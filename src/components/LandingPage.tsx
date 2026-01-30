@@ -1,4 +1,4 @@
-import { Target, TrendingUp, Users, BarChart3, CheckCircle2, Rocket, Calendar, Lightbulb, Zap, Award, Building2, LineChart, ArrowRight, ArrowDown, ChevronRight, GitBranch, Eye, MessageCircleQuestion, ClipboardCheck, AlertTriangle, Cog, Monitor, GraduationCap, ShieldCheck, X, Check, Briefcase, Globe, Code, ChartNoAxesCombined } from "lucide-react";
+import { Target, TrendingUp, Users, BarChart3, CheckCircle2, Rocket, Calendar, Lightbulb, Zap, Award, Building2, LineChart, ArrowRight, ArrowDown, ChevronRight, GitBranch, Eye, MessageCircleQuestion, ClipboardCheck, AlertTriangle, Cog, Monitor, GraduationCap, ShieldCheck, X, Check, Briefcase, Globe, Code, ChartNoAxesCombined, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-consulting.jpg";
@@ -11,6 +11,9 @@ import logoContaAzul from "@/assets/logos/contaazul-white.png";
 import logoForDoctor from "@/assets/logos/fordoctor.svg";
 import logoPejota from "@/assets/logos/pejota.webp";
 import logoAMContabilidade from "@/assets/logos/am-contabilidade.webp";
+import logoNetlinks from "@/assets/logos/netlinks.png";
+import logoCobli from "@/assets/logos/cobli.png";
+import logoKenoby from "@/assets/logos/kenoby.png";
 import foundersTransparent from "@/assets/founders-transparent.png";
 import tiagoPhoto from "@/assets/tiago-faria.jpg";
 import fayolaPhoto from "@/assets/fayola-damaceno.jpg";
@@ -346,19 +349,20 @@ const LandingPage = () => {
               </motion.div>
             </div>
 
-            {/* Seção dos Especialistas */}
+            {/* Seção dos Especialistas - Premium */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <div className="text-center mb-10">
+              <div className="text-center mb-12">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-4">Quem Somos</span>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3" style={{ fontFamily: 'Oxanium, sans-serif' }}>
-                  Nossos Especialistas
+                  Lideranças que fizeram história em vendas
                 </h3>
-                <p className="text-muted-foreground max-w-xl mx-auto">
-                  Valorizamos <span className="font-bold text-foreground">multidisciplinaridade</span> e <span className="font-bold text-foreground">diversidade</span> que geram sinergia.
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  <span className="font-bold text-foreground">Multidisciplinaridade</span> e <span className="font-bold text-foreground">diversidade</span> que geram resultados reais — porque entendemos a dor do dono e a pressão da meta.
                 </p>
               </div>
 
@@ -366,7 +370,7 @@ const LandingPage = () => {
                 
                 {/* Tiago */}
                 <motion.div 
-                  className="relative p-8 rounded-2xl bg-loboh-navy overflow-hidden group"
+                  className="relative rounded-2xl bg-loboh-navy overflow-hidden group"
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -374,44 +378,74 @@ const LandingPage = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
-                  <div className="flex flex-col sm:flex-row items-center gap-6 relative z-10">
-                    <div className="w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 ring-4 ring-primary/30">
-                      <img src={tiagoPhoto} alt="Tiago Faria" className="w-full h-full object-cover" />
+                  {/* Header com tags */}
+                  <div className="px-6 pt-6 pb-4 relative z-10">
+                    <div className="flex flex-wrap items-center gap-2 mb-4">
+                      <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold">Founder</span>
+                      <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold">CEO</span>
+                      <span className="px-3 py-1 rounded-full bg-white/10 text-loboh-gray-200 text-xs">Go-To-Market</span>
                     </div>
                     
-                    <div className="text-center sm:text-left flex-1">
-                      <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-3">
-                        <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold">CEO</span>
-                        <span className="px-3 py-1 rounded-full bg-white/10 text-loboh-gray-200 text-xs">Vendas</span>
-                        <span className="px-3 py-1 rounded-full bg-white/10 text-loboh-gray-200 text-xs">Estratégia</span>
+                    <div className="flex items-start gap-5">
+                      <div className="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 ring-2 ring-primary/40">
+                        <img src={tiagoPhoto} alt="Tiago Faria" className="w-full h-full object-cover" />
                       </div>
-                      <h4 className="text-xl font-bold text-white mb-2">Tiago Faria</h4>
-                      <p className="text-loboh-gray-300 text-sm leading-relaxed">
-                        Após 10+ anos de carreira técnica em TI, atuou na liderança de vendas de grandes scale-ups como <span className="text-primary font-medium">Gupy</span>, <span className="text-primary font-medium">Rock Content</span>, <span className="text-primary font-medium">ContaAzul</span> e <span className="text-primary font-medium">Kenoby</span>, onde consolidou seu próprio método de gestão de vendas ágil. Co-fundador da agência global de SEO <span className="text-primary font-medium">Netlinks</span>.
-                      </p>
+                      
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-xl font-bold text-white mb-2" style={{ fontFamily: 'Oxanium, sans-serif' }}>Tiago Faria</h4>
+                        <p className="text-loboh-gray-300 text-sm leading-relaxed">
+                          Após 10+ anos de carreira técnica em TI, atuou na liderança de vendas de grandes scale-ups, onde consolidou seu próprio método de gestão de vendas ágil.
+                        </p>
+                      </div>
                     </div>
                   </div>
                   
-                  {/* Competências */}
-                  <div className="mt-6 pt-6 border-t border-white/10 flex flex-wrap gap-3 justify-center sm:justify-start">
-                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
-                      <ChartNoAxesCombined className="w-4 h-4 text-primary" />
-                      <span>Sales Operations</span>
+                  {/* Empresas com logos */}
+                  <div className="px-6 py-4 border-t border-white/10 relative z-10">
+                    <div className="flex flex-wrap items-center gap-4">
+                      <img src={logoGupy} alt="Gupy" className="h-4 opacity-60 brightness-0 invert" />
+                      <img src={logoRockContent} alt="Rock Content" className="h-5 opacity-60 brightness-0 invert" />
+                      <img src={logoContaAzul} alt="ContaAzul" className="h-3.5 opacity-60 brightness-0 invert" />
+                      <img src={logoKenoby} alt="Kenoby" className="h-5 opacity-60 brightness-0 invert" />
                     </div>
-                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
-                      <Code className="w-4 h-4 text-primary" />
-                      <span>Tech Background</span>
+                    <p className="text-loboh-gray-400 text-xs mt-3">
+                      Também co-fundador da agência global de SEO <span className="text-primary font-medium">Netlinks</span>
+                    </p>
+                    <div className="flex items-center gap-3 mt-2">
+                      <img src={logoNetlinks} alt="Netlinks" className="h-4 opacity-60 brightness-0 invert" />
                     </div>
-                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
-                      <Globe className="w-4 h-4 text-primary" />
-                      <span>SEO Global</span>
+                  </div>
+                  
+                  {/* Footer com competências e LinkedIn */}
+                  <div className="px-6 py-4 bg-white/5 border-t border-white/10 flex items-center justify-between relative z-10">
+                    <div className="flex flex-wrap gap-4">
+                      <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                        <ChartNoAxesCombined className="w-4 h-4 text-primary" />
+                        <span>Sales Ops</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                        <Code className="w-4 h-4 text-primary" />
+                        <span>Tech</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                        <Globe className="w-4 h-4 text-primary" />
+                        <span>SEO Global</span>
+                      </div>
                     </div>
+                    <a 
+                      href="https://www.linkedin.com/in/tiagofariabh/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-9 h-9 rounded-lg bg-primary/20 hover:bg-primary/30 flex items-center justify-center transition-colors"
+                    >
+                      <Linkedin className="w-4 h-4 text-primary" />
+                    </a>
                   </div>
                 </motion.div>
 
                 {/* Fayola */}
                 <motion.div 
-                  className="relative p-8 rounded-2xl bg-loboh-navy overflow-hidden group"
+                  className="relative rounded-2xl bg-loboh-navy overflow-hidden group"
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -419,38 +453,61 @@ const LandingPage = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
-                  <div className="flex flex-col sm:flex-row items-center gap-6 relative z-10">
-                    <div className="w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 ring-4 ring-accent/30">
-                      <img src={fayolaPhoto} alt="Fayola Damaceno" className="w-full h-full object-cover object-top" style={{ objectPosition: 'center 15%' }} />
+                  {/* Header com tags */}
+                  <div className="px-6 pt-6 pb-4 relative z-10">
+                    <div className="flex flex-wrap items-center gap-2 mb-4">
+                      <span className="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-semibold">Sócia Diretora</span>
+                      <span className="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-semibold">CLO</span>
+                      <span className="px-3 py-1 rounded-full bg-white/10 text-loboh-gray-200 text-xs">Enablement</span>
                     </div>
                     
-                    <div className="text-center sm:text-left flex-1">
-                      <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-3">
-                        <span className="px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-semibold">COO</span>
-                        <span className="px-3 py-1 rounded-full bg-white/10 text-loboh-gray-200 text-xs">Enablement</span>
-                        <span className="px-3 py-1 rounded-full bg-white/10 text-loboh-gray-200 text-xs">Operações</span>
+                    <div className="flex items-start gap-5">
+                      <div className="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0 ring-2 ring-accent/40">
+                        <img src={fayolaPhoto} alt="Fayola Damaceno" className="w-full h-full object-cover object-top" style={{ objectPosition: 'center 15%' }} />
                       </div>
-                      <h4 className="text-xl font-bold text-white mb-2">Fayola Damaceno</h4>
-                      <p className="text-loboh-gray-300 text-sm leading-relaxed">
-                        Especialista em <span className="text-accent font-medium">Sales Enablement</span> com mais de 15 anos de experiência em Vendas. Fayola treinou times de vendas de alta performance na <span className="text-accent font-medium">ContaAzul</span>, <span className="text-accent font-medium">Cobli</span> e <span className="text-accent font-medium">Movidesk</span>.
-                      </p>
+                      
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-xl font-bold text-white mb-2" style={{ fontFamily: 'Oxanium, sans-serif' }}>Fayola Damaceno</h4>
+                        <p className="text-loboh-gray-300 text-sm leading-relaxed">
+                          Especialista em <span className="text-accent font-medium">Sales Enablement</span> com mais de 15 anos de experiência. Treinou times de vendas de alta performance nas maiores scale-ups do Brasil.
+                        </p>
+                      </div>
                     </div>
                   </div>
                   
-                  {/* Competências */}
-                  <div className="mt-6 pt-6 border-t border-white/10 flex flex-wrap gap-3 justify-center sm:justify-start">
-                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
-                      <GraduationCap className="w-4 h-4 text-accent" />
-                      <span>Treinamento</span>
+                  {/* Empresas com logos */}
+                  <div className="px-6 py-4 border-t border-white/10 relative z-10">
+                    <div className="flex flex-wrap items-center gap-4">
+                      <img src={logoContaAzul} alt="ContaAzul" className="h-3.5 opacity-60 brightness-0 invert" />
+                      <img src={logoCobli} alt="Cobli" className="h-5 opacity-60 brightness-0 invert" />
+                      <img src={logoMovidesk} alt="Movidesk" className="h-5 opacity-60 brightness-0 invert" />
                     </div>
-                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
-                      <Users className="w-4 h-4 text-accent" />
-                      <span>Gestão de Times</span>
+                  </div>
+                  
+                  {/* Footer com competências e LinkedIn */}
+                  <div className="px-6 py-4 bg-white/5 border-t border-white/10 flex items-center justify-between relative z-10">
+                    <div className="flex flex-wrap gap-4">
+                      <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                        <GraduationCap className="w-4 h-4 text-accent" />
+                        <span>Treinamento</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                        <Users className="w-4 h-4 text-accent" />
+                        <span>Gestão</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
+                        <Briefcase className="w-4 h-4 text-accent" />
+                        <span>Processos</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-loboh-gray-300 text-xs">
-                      <Briefcase className="w-4 h-4 text-accent" />
-                      <span>Processos</span>
-                    </div>
+                    <a 
+                      href="https://www.linkedin.com/in/fayoladamaceno/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-9 h-9 rounded-lg bg-accent/20 hover:bg-accent/30 flex items-center justify-center transition-colors"
+                    >
+                      <Linkedin className="w-4 h-4 text-accent" />
+                    </a>
                   </div>
                 </motion.div>
               </div>
