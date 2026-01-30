@@ -11,11 +11,11 @@
     <meta property="og:title" content="Loboh | Planejamento Comercial Gratuito para Contabilidades" />
     <meta property="og:description" content="Sessão estratégica 1:1 gratuita com o CEO da Loboh. Defina metas, canais e KPIs para crescer em 2026." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" /> -->
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Loboh" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" /> -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +23,14 @@
     
     <link rel="canonical" href="https://loboh.com.br" />
   </head>
+
+    <script>
+    const redirectPath = sessionStorage.getItem("redirectPath");
+    if (redirectPath) {
+      sessionStorage.removeItem("redirectPath");
+      history.replaceState(null, "", redirectPath);
+    }
+  </script>
 
   <body>
     <div id="root"></div>
