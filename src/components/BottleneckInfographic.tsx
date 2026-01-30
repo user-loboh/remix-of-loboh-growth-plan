@@ -34,7 +34,7 @@ const steps = [
       { text: "Falta", bold: true },
       { text: " " },
       { text: "direção clara e capacitação", bold: true },
-      { text: " e time e liderança " },
+      { text: ". Time e liderança " },
       { text: "ficam desmotivados", bold: true },
       { text: "." }
     ]
