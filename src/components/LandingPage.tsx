@@ -25,7 +25,7 @@ const LandingPage = () => {
       behavior: 'smooth'
     });
   };
-  return <div className="min-h-screen bg-background overflow-x-hidden">
+  return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-loboh-navy/95 backdrop-blur-md border-b border-muted/20">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -47,14 +47,14 @@ const LandingPage = () => {
         
         {/* Right - Partner Images with Smoke Effect */}
         <div className="hidden lg:block absolute pointer-events-none z-20" style={{
-        right: '-130px',
+        right: '-80px',
         bottom: '4px',
         height: '85vh',
         width: 'auto'
       }}>
           {/* Smoke layers */}
           <div className="absolute inset-0 overflow-hidden" style={{
-          width: '70%',
+          width: '150%',
           left: '-25%'
         }}>
             <div className="absolute inset-0 animate-smoke-drift" style={{

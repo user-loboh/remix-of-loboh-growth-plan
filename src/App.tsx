@@ -15,14 +15,12 @@ const App = () => (
       <Toaster />
       <Sonner />
       <Routes>
-        <Route path="/" element={<NotFound />} />
-        <Route path="/contabilidade" element={<Index />} />
-        <Route path="/formulario" element={<Formulario />} />
+        <Route path="/" element={<Index />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/formulario" element={<Formulario />} />
       </Routes>
     </TooltipProvider>
   </QueryClientProvider>
 );
-
 
 export default App;
